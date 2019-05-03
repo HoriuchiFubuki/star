@@ -11,8 +11,6 @@ public class LittlePlanetMove : MonoBehaviour
 
     public float corpsSpeed;
     public int corpsSplit;
-    //public int corpsSplitX;
-    //public int corpsSplitY;
     public float widthSplit;
     public float heightSplit;
 
@@ -46,7 +44,7 @@ public class LittlePlanetMove : MonoBehaviour
     {
         if (!gameGenerator.GetComponent<TimeGenerator>().cameraMoveNow)
         {
-            ColorChange();
+            //ColorChange();
             if (!hit)
             {
                 if (count < 120)

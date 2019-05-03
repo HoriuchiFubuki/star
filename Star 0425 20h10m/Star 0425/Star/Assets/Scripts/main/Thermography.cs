@@ -8,7 +8,6 @@ public class Thermography : MonoBehaviour
     private GameObject thermography;
     bool coolTimeNow = false;
     int coolTimer = 0;
-    Touch touch;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +19,7 @@ public class Thermography : MonoBehaviour
     {
         if (!DebugPC.pc)
         {
-            touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began && !coolTimeNow)
+            if (Input.GetMouseButtonDown(0) && !coolTimeNow)
             {
                 thermography = Instantiate(thermographyOriginal, transform.position, Quaternion.identity) as GameObject;
                 coolTimeNow = true;

@@ -16,6 +16,10 @@ public class PlayerHit : MonoBehaviour
     {
         if (other.gameObject.tag == "DangerObject" && !other.gameObject.GetComponent<ThermographyHit>().thermographyHitNow)
         {
+            if (SystemInfo.supportsVibration)
+            {
+                Handheld.Vibrate();
+            }
             if (gameGenerator.GetComponent<GameGenerator>().star <= 0)
             {
                 SceneManager.LoadScene("ResultScene");

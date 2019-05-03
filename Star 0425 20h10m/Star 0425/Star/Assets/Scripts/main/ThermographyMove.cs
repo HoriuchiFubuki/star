@@ -15,15 +15,7 @@ public class ThermographyMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.position = player.transform.position;
-        //if (transform.localScale.x < 100)
-        //{
-        //    transform.localScale *= 1.2f;
-        //}
-        //else
-        //    Destroy(gameObject);
-
-        transform.position += Vector3.forward * (30/60.0f);
+        transform.position += Vector3.forward * (30 / 60.0f);
         if (transform.localScale.x < 50)
         {
             transform.localScale = new Vector3(transform.localScale.x * 1.2f, transform.localScale.y * 1.2f, 1.0f);
